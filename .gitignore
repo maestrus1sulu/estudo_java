@@ -1,0 +1,13 @@
+# Ignorar a pasta target, que contém arquivos compilados
+target/
+
+# Ignorar arquivos de dependências do Maven
+.m2/
+
+# Ignorar logs
+*.log
+
+# Ignorar arquivos de IDEs (Intellij IDEA, VS code, Eclipse)
+.idea/
+.vscode/
+*.iml
