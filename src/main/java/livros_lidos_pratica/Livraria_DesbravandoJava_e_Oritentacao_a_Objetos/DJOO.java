@@ -1,7 +1,7 @@
 package livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos;
 
-import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.modelo.Autor;
-import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.modelo.Ebook;
+import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.modelo.*;
+
 
 public class DJOO {
     // --------------------------------------REGISTRO DE VENDAS-------------------------------------
@@ -23,33 +23,30 @@ public class DJOO {
         autor1.setCpf("777-777-777-00");
         autor1.setEmail("George@gmail.com");
 
-        // SEMPRE USAR DEPOIS DA INSTACIA AUTOR TER SIGO POPULADA "INSERIDA OS VALORE DE
-        // AUTOR" - EVITOR PASSAR AUTOR NULO (NULL)
-        Livro livro1 = new Livro(autor1);
+        // SEMPRE USAR DEPOIS DA INSTACIA AUTOR TER SIGO POPULADA "INSERIDA OS VALORES DE
+        // AUTOR" - EVITOR PASSAR AUTOR NULO (NULL) PARA UM LIVRO, POIS TODos LIVROs TEM 1 AUTOR
+        // NAO É MAIS UM LIVRO GENERICO MAS SIM UM LIVRO FISICO
+        LivroFisico livrof = new LivroFisico(autor1);
 
-        livro1.setNome("Cronicas de Narnia");
-        livro1.setDescricao("Livro para adolescentes");
-        livro1.setPreco(59.90);
-        livro1.setIsbn("100-222-00");
-        livro1.setAutor(autor1);
+        livrof.setNome("Cronicas de Narnia");
+        livrof.setDescricao("Livro para adolescentes");
+        livrof.setPreco(59.90);
+        livrof.setIsbn("100-222-00");
+        livrof.setAutor(autor1);
 
-        livro1.mostrarDetalhes();
+        livrof.mostrarDetalhes();
 
-        if (!livro1.aplicarDescontoDe(0.3)) {
-            System.out.println("Desconto no livro não pode ser maior do que 30%");
-        } else {
-            System.out.println("Valor do livro com desconto: " + livro1.getPreco());
-        }
-
+        // LIVRO DIGITAL
         Ebook ebook = new Ebook(autor1);
         ebook.setPreco(29.90);
         ebook.setImpresso(false);
 
-        if (!ebook.aplicarDescontoDe(0.15)) {
-            System.out.println("Desconto no livro não pode ser maior do que 15%");
-        } else {
-            System.out.println("Valor do ebook com desconto: " + ebook.getPreco());
-        }
+        CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
+
+        carrinho.adicionar(livrof);
+        carrinho.adicionar(ebook);
+
+        System.out.println("Total "+ carrinho.getTotal());
 
     }
 }

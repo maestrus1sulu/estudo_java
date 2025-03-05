@@ -2,7 +2,7 @@ package livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos;
 
 import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.modelo.Autor;
 
-public class Livro {
+public abstract class Livro {
     private String nome;
     private String descricao;
     private double preco;

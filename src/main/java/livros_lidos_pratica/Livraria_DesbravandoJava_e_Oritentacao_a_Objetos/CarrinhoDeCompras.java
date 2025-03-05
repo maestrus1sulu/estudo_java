@@ -9,8 +9,8 @@ public class CarrinhoDeCompras {
     // FORMA MAIS GENERICA, pela sua classe Pai - Esse recurso é chamado de
     // POLIMORFISMO.
     public void adicionar(Livro livro) {
-        System.out.println("LIVRO ADICIONADO");
-        livro.aplicarDescontoDe(0.05);
+        System.out.println("LIVRO ADICIONADO: "+ livro);
+        livro.aplicarDescontoDe(0.106);
         total += livro.getPreco();
     }
 
