@@ -26,7 +26,7 @@ public class DJOO {
         // SEMPRE USAR DEPOIS DA INSTACIA AUTOR TER SIGO POPULADA "INSERIDA OS VALORES DE
         // AUTOR" - EVITOR PASSAR AUTOR NULO (NULL) PARA UM LIVRO, POIS TODos LIVROs TEM 1 AUTOR
         // NAO É MAIS UM LIVRO GENERICO MAS SIM UM LIVRO FISICO
-        LivroFisico livrof = new LivroFisico(autor1);
+        Livro livrof = new LivroFisico(autor1);
 
         livrof.setNome("Cronicas de Narnia");
         livrof.setDescricao("Livro para adolescentes");
@@ -37,7 +37,7 @@ public class DJOO {
         livrof.mostrarDetalhes();
 
         // LIVRO DIGITAL
-        Ebook ebook = new Ebook(autor1);
+        Livro ebook = new Ebook(autor1);
         ebook.setPreco(29.90);
         ebook.setImpresso(false);
 
