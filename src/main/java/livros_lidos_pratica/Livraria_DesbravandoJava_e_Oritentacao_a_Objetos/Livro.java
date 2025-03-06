@@ -45,12 +45,8 @@ public abstract class Livro {
     }
 
     public boolean aplicarDescontoDe(double porcentagem) {
-        if (porcentagem > 0.3) {
-            return false;
-        }
-        // estou multiplicando preco por porcentagme e depois subtraiu com o preco
-        this.preco -= this.preco * porcentagem;
-        return true;
+        //Por padrao nenhum livro tera desconto.
+        return false;
     }
 
     public String getNome() {

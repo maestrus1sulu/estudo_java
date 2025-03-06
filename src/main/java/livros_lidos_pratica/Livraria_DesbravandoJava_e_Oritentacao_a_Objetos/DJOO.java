@@ -41,10 +41,16 @@ public class DJOO {
         ebook.setPreco(29.90);
         ebook.setImpresso(false);
 
+        // MINI - LIVRO
+        Mini_Livro minil = new Mini_Livro(autor1);
+        minil.setPreco(39.90);
+           
+
         CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
 
         carrinho.adicionar(livrof);
         carrinho.adicionar(ebook);
+        carrinho.adicionar(minil);
 
         System.out.println("Total "+ carrinho.getTotal());
 
