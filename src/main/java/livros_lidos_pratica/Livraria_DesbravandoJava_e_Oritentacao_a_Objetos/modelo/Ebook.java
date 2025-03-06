@@ -14,7 +14,10 @@ public class Ebook extends Livro {
         if (isImpresso() && porcentagem > 0.15) { // se for difital
             return false;
         }
-        return super.aplicarDescontoDe(porcentagem);
+        double desconto = getPreco() * porcentagem;
+        setPreco(getPreco() - desconto);
+        System.out.println("Aplicado desconto ao Ebook");
+        return true;
     }
 
     public String getWaterMark() {
