@@ -1,25 +1,19 @@
 package livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos;
 
-import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.modelo.Revista;
+import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.interfaces.Produto;
 
 public class CarrinhoDeCompras {
     private double total;
 
-    // Como qualquer outro tipo de livro é filhos (extensoes) da classe LIVRO.
-    // Podemos usar o tipo Pai(superclasse) ja que os outros tipos de livro herdam
-    // de Livro.
-    // FORMA MAIS GENERICA, pela sua classe Pai - Esse recurso é chamado de
-    // POLIMORFISMO.
-    public void adicionar(Livro livro) {
-        //System.out.println("LIVRO ADICIONADO: "+ livro);
-        livro.aplicarDescontoDe(0.106);
-        total += livro.getPreco();
-    }
-
-    public void adicionar(Revista revista){
-        //System.out.println("Adicionando: "+ revista);
-        revista.aplicarDescontoDe(0.05);
-        total += revista.getPreco();
+    /**
+     * Como outras classes de produtos (como livros e revistas) herdam da classe Produto,
+     * podemos utilizar o tipo Produto (superclasse) para representá-las (referenciá-las).
+     * Esse conceito é conhecido como POLIMORFISMO, permitindo que objetos de diferentes
+     * subclasses sejam tratados de forma genérica pela classe Pai.
+     */
+    public void adicionar(Produto produto) {
+        System.out.println("PRODUTO ADICIONADO: " + produto.getClass().getSimpleName());
+        total += produto.getPreco();
     }
 
     public double getTotal() {

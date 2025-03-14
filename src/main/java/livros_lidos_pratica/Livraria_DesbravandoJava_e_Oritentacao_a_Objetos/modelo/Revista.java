@@ -2,7 +2,7 @@ package livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.mo
 
 import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.interfaces.*;
 
-public class Revista {
+public class Revista implements Produto{
     private String nome;
     private String descricao;
     private double preco;
