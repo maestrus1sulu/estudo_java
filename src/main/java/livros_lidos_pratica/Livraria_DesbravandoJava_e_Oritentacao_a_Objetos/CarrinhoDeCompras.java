@@ -1,5 +1,7 @@
 package livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos;
 
+import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.modelo.Revista;
+
 public class CarrinhoDeCompras {
     private double total;
 
@@ -12,6 +14,12 @@ public class CarrinhoDeCompras {
         //System.out.println("LIVRO ADICIONADO: "+ livro);
         livro.aplicarDescontoDe(0.106);
         total += livro.getPreco();
+    }
+
+    public void adicionar(Revista revista){
+        //System.out.println("Adicionando: "+ revista);
+        revista.aplicarDescontoDe(0.05);
+        total += revista.getPreco();
     }
 
     public double getTotal() {
