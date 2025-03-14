@@ -1,8 +1,9 @@
 package livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.modelo;
 
 import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.Livro;
+import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.interfaces.Promocional;
 
-public class LivroFisico extends Livro {
+public class LivroFisico extends Livro implements Promocional {
     private final double taxa = 0.05;
 
     public LivroFisico(Autor autor) {

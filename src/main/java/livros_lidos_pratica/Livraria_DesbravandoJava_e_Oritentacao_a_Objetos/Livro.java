@@ -45,16 +45,6 @@ public abstract class Livro implements Produto{
         return this.autor != null;
     }
 
-    /**
-     * Aqui aplicamos uma regra de Orientação a Objetos onde:
-     * 
-     * TODA classe filha (subclasse) concreta (não abstrata) é obrigada a escrever os metodos abstratos da classe Pai (superclasse),
-     * caso contrário seu codigo nao compilará
-     * 
-     * @param porcentagem
-     */
-    public abstract boolean aplicarDescontoDe(double porcentagem);
-
     public String getNome() {
         return nome;
     }
