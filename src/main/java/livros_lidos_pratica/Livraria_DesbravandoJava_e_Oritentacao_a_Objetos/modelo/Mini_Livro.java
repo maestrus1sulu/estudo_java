@@ -8,11 +8,4 @@ public class Mini_Livro extends Livro{
         super(autor); // Delegando para o construtor da classe pai usando o super()
     }
 
-    @Override
-    public boolean aplicarDescontoDe(double porcentagem) {
-        System.out.println("Nao foi aplicado desconto no Mini");
-        return false;
-    }
-
-    
 }

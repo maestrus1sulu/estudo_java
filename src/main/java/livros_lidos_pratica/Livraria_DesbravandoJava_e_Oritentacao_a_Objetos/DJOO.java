@@ -28,7 +28,16 @@ public class DJOO {
         // AUTOR" - EVITOR PASSAR AUTOR NULO (NULL) PARA UM LIVRO, POIS TODos LIVROs TEM
         // 1 AUTOR
         // NAO É MAIS UM LIVRO GENERICO MAS SIM UM LIVRO FISICO
-        Livro livrof = new LivroFisico(autor1);
+        /**
+         * vantagem: simples e direto
+         * desvantagem: depende diretamente da implementação LivroFisico, reduzindo a
+         * flexibilidade
+         * 
+         * poderia usar outras formas mas teria que fazer casting ou apenas permitiria
+         * chamar metodos definidos na interface caso desclara-se como tal interface
+         * como por exemplo: Promocional
+         */
+        LivroFisico livrof = new LivroFisico(autor1);
 
         livrof.setNome("Cronicas de Narnia");
         livrof.setDescricao("Livro para adolescentes");
@@ -47,7 +56,7 @@ public class DJOO {
         Mini_Livro minil = new Mini_Livro(autor1);
         minil.setPreco(39.90);
 
-        //Editora da revista
+        // Editora da revista
         Editora editora = new Editora();
         editora.setNomeFantasia("inova-mundo");
         editora.setRazaoSocial("brasil-investi");
@@ -56,11 +65,16 @@ public class DJOO {
         // REVISTA
         Revista revista = new Revista();
         revista.setNome("Agronegocio Mundial");
-        revista.setDescricao("Informa como o globalismo está revolucionando o mercado mais movimentado nos ultimo 10 anos");
+        revista.setDescricao(
+                "Informa como o globalismo está revolucionando o mercado mais movimentado nos ultimo 10 anos");
         revista.setEditora(editora);
         revista.setPreco(15.00);
 
         CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
+
+        if (livrof.aplicarDescontoDe10Porcento()) {
+            System.out.println("Valor agora é : " + livrof.getPreco());
+        }
 
         carrinho.adicionar(livrof);
         carrinho.adicionar(ebook);
