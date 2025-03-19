@@ -95,6 +95,5 @@ public class DJOO {
         
         // Exibindo o total da compra
         System.out.println("Total da compra: R$ " + carrinho.getTotal());
-
     }
 }
