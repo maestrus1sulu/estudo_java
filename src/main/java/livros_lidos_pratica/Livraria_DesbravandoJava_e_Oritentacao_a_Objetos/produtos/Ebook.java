@@ -1,7 +1,7 @@
-package livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.modelo;
+package livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.produtos;
 
-import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.Livro;
-import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.interfaces.Promocional;
+import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.livraria.*;
+
 
 public class Ebook extends Livro implements Promocional{
     private String waterMark;

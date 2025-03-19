@@ -1,6 +1,6 @@
 package livros_lidos_pratica;
 
-import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.DJOO;
+import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.teste.DJOO;
 
 public class Main {
     public static void main(String[] args) {

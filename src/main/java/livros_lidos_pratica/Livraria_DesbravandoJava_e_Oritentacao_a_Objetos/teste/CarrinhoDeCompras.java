@@ -1,6 +1,6 @@
-package livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos;
+package livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.teste;
 
-import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.interfaces.Produto;
+import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.produtos.*;;
 
 public class CarrinhoDeCompras {
     private double total;

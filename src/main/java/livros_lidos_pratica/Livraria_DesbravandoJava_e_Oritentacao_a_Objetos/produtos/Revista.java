@@ -1,6 +1,6 @@
-package livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.modelo;
+package livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.produtos;
 
-import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.interfaces.*;
+import livros_lidos_pratica.Livraria_DesbravandoJava_e_Oritentacao_a_Objetos.livraria.*;
 
 public class Revista implements Produto, Promocional{
     private String nome;
